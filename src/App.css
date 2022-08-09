@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap");
+.App {
+  font-family: "Work Sans", sans-serif;
+  height: 100vh;
+}
+:root {
+  --filter-icon-hover: #354477;
+  --txt-white: #ffffff;
+  --pomodoro-primary-color: #151f39;
+  --txt-black: #000000;
+}
