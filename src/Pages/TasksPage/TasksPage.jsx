@@ -1,7 +1,7 @@
 import { Navbar } from "../../components/Navbar/Navbar";
 import { AiOutlinePlus } from "../../Utils/icons";
 import "./home.css";
-const Home = () => {
+const TasksPage = () => {
   return (
     <div>
       <Navbar />
@@ -23,4 +23,4 @@ const Home = () => {
     </div>
   );
 };
-export { Home };
+export { TasksPage };

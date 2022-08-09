@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Navbar } from "../../components/Navbar/Navbar";
 import "./landingPage.css";
-import "../Home/home.css"
+import "../TasksPage/home.css";
 const LandingPage = () => {
   const navigate = useNavigate();
   return (
@@ -20,12 +20,13 @@ const LandingPage = () => {
               booster is the tool you need to inspire success every day.
             </p>
             <div className="btns-align">
-              <button className="pomodoro-btn" onClick={() => navigate("/home")}>
+              <button
+                className="pomodoro-btn"
+                onClick={() => navigate("/tasks")}
+              >
                 Learn More
               </button>
-              <button className="pomodoro-btn" onClick={() => navigate("/tasks")}>
-                Timer Page
-              </button>
+              <button className="pomodoro-btn">Timer Page</button>
             </div>
           </div>
           <img src="/pomodoro-img-1.jpg" className="light-theme-img" alt="" />
