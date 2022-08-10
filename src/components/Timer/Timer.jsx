@@ -14,9 +14,19 @@ const Timer = ({ focusTime, breakTime }) => {
   const isPausedRef = useRef(isPaused);
   const modeRef = useRef(mode);
 
-  const tick = () => {
+  const tickTimer = () => {
     secondsLeftRef.current--;
     setSecondsLeft(secondsLeftRef.current);
+  };
+  // Timer calculation for progress Bar
+  const totalSeconds = mode === "work" ? focusTime * 60 : breakTime * 60;
+  const percentage = Math.round((secondsLeft / totalSeconds) * 100);
+  const minutes = Math.floor(secondsLeft / 60);
+  let seconds = secondsLeft % 60;
+  if (seconds < 10) seconds = "0" + seconds;
+
+  const changePageTitle = () => {
+    document.title = minutes + ":" + seconds;
   };
   useEffect(() => {
     const switchMode = () => {
@@ -38,16 +48,18 @@ const Timer = ({ focusTime, breakTime }) => {
       if (secondsLeftRef.current === 0) {
         return switchMode();
       }
-      tick();
+      tickTimer();
     }, 100);
     return () => clearInterval(interval);
   }, [focusTime, breakTime]);
-  // Timer calculation for progress Bar
-  const totalSeconds = mode === "work" ? focusTime * 60 : breakTime * 60;
-  const percentage = Math.round((secondsLeft / totalSeconds) * 100);
-  const minutes = Math.floor(secondsLeft / 60);
-  let seconds = secondsLeft % 60;
-  if (seconds < 10) seconds = "0" + seconds;
+  // Restart
+  const restartTimer = () => {
+    secondsLeftRef.current = focusTime * 60;
+    setSecondsLeft(secondsLeftRef.current);
+  };
+  useEffect(() => {
+    changePageTitle();
+  }, [minutes, seconds]);
   return (
     <div className="timer-container progress-bar-wrapper">
       <div className="progress-bar">
@@ -82,7 +94,10 @@ const Timer = ({ focusTime, breakTime }) => {
             }}
           />
         )}
-        <VscDebugRestart className="filter-icon pomodoro-icons timer-icons" />
+        <VscDebugRestart
+          className="filter-icon pomodoro-icons timer-icons"
+          onClick={() => restartTimer()}
+        />
       </div>
     </div>
   );

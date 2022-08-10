@@ -78,6 +78,7 @@ const TaskModal = ({
           className="pomodoro-task-input"
           placeholder="Enter Focus Time"
           value={taskInput.focusTime}
+          min="1"
           required
           onChange={(e) =>
             setTaskInput({ ...taskInput, focusTime: e.target.value })
@@ -92,6 +93,7 @@ const TaskModal = ({
           placeholder="Enter Break Time"
           value={taskInput.breakTime}
           required
+          min="1"
           onChange={(e) =>
             setTaskInput({ ...taskInput, breakTime: e.target.value })
           }
