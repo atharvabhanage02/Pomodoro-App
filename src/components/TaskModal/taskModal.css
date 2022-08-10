@@ -1,0 +1,48 @@
+.task-main-container {
+  position: absolute;
+  top: 40%;
+  right: 40%;
+  background-color: #b8c5d6;
+  padding: 15px;
+  border: 1px solid black;
+  width: 220px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.task-details > h3 {
+  margin: 10px;
+  color: black;
+}
+.login-btn {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  padding: 7px 12px;
+  border-radius: 8px;
+  background-color: var(--pomodoro-primary-color);
+  cursor: pointer;
+  border: none;
+  align-self: center;
+  color: white;
+}
+.login-btn:hover {
+  background-color: #232d45;
+}
+.cancel-icon {
+  position: absolute;
+  top: 2px;
+  right: 0px;
+}
+.pomodoro-task-input {
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  width: 85%;
+}
+input:focus {
+  outline: none !important;
+  border-color: #719ece;
+  box-shadow: 0 0 10px #719ece;
+}
