@@ -97,7 +97,7 @@ const TaskModal = ({
           }
         />
       </div>
-      <button className="login-btn create-task" onClick={() => addTask()}>
+      <button className="pomodoro-btn create-task" onClick={() => addTask()}>
         {editModal ? "Update" : "Add"}
       </button>
     </div>
