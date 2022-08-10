@@ -49,7 +49,7 @@ const Timer = ({ focusTime, breakTime }) => {
         return switchMode();
       }
       tickTimer();
-    }, 100);
+    }, 1000);
     return () => clearInterval(interval);
   }, [focusTime, breakTime]);
   // Restart

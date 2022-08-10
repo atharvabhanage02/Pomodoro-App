@@ -6,7 +6,7 @@ import { useTask } from "../../Context/task-context";
 import "./timerPage.css";
 const TimerPage = () => {
   const params = useParams();
-  const { tasks, state } = useTask();
+  const { state } = useTask();
   const currentTask = state.tasks.find((task) => task.id === params.id);
   return (
     <div>
@@ -15,7 +15,6 @@ const TimerPage = () => {
         <Timer
           focusTime={currentTask.focusTime}
           breakTime={currentTask.breakTime}
-          // currentTask={currentTask}
         />
         <TimerDetails currentTask={currentTask} />
       </div>
