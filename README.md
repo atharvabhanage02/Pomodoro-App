@@ -1,5 +1,5 @@
-# Behold the Power of Productivity !!
-## Get all your work Done using [BeFocused](https://be-focused.netlify.app/)
+# Achieve productivity with simple, charming, insightful time tracking
+## Start turning to-dos into have-dones using [BeFocused](https://be-focused.netlify.app/)
 
 ## Demo
 
