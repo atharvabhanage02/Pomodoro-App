@@ -1,8 +1,10 @@
-import { BsFillMoonFill, BsSunFill } from "react-icons/bs";
+import { BsFillMoonFill, BsSunFill } from "../../Utils/icons";
 import { useNavigate } from "react-router-dom";
+import { useTheme } from "../../Context/theme-context";
 import "./navbar.css";
 const Navbar = () => {
   const navigate = useNavigate();
+  const { theme, setTheme } = useTheme();
   return (
     <nav class="navbar">
       <div class="navbar-wrapper">
@@ -12,7 +14,17 @@ const Navbar = () => {
           </div>
         </div>
         <div class="user-activity-details">
-          <BsFillMoonFill className="filter-icon" />
+          {theme === "light" ? (
+            <BsFillMoonFill
+              className="filter-icon"
+              onClick={() => setTheme("dark")}
+            />
+          ) : (
+            <BsSunFill
+              className="filter-icon"
+              onClick={() => setTheme("light")}
+            />
+          )}
         </div>
       </div>
     </nav>
