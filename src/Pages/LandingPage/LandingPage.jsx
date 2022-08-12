@@ -26,7 +26,7 @@ const LandingPage = () => {
               >
                 Learn More
               </button>
-              <button className="pomodoro-btn">Timer Page</button>
+             
             </div>
           </div>
           <img src="/pomodoro-img-1.jpg" className="light-theme-img" alt="" />
