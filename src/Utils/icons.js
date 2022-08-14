@@ -11,6 +11,7 @@ import { FaPlay } from "react-icons/fa";
 import { MdDelete, MdOutlineCancel } from "react-icons/md";
 import { IoIosPause } from "react-icons/io";
 import { VscDebugRestart } from "react-icons/vsc";
+import { BsFillMoonFill, BsSunFill } from "react-icons/bs";
 export {
   AiOutlineClockCircle,
   AiFillClockCircle,
@@ -24,4 +25,6 @@ export {
   IoIosPause,
   GiPauseButton,
   VscDebugRestart,
+  BsFillMoonFill,
+  BsSunFill,
 };
